@@ -27,7 +27,7 @@ cd DJANGO-MIDTRANS-API
 
 ```
 
-1. **Create and Activate Virtual Environment**
+2. **Create and Activate Virtual Environment**
 ```bash
 python -m venv venv
 # Windows:
