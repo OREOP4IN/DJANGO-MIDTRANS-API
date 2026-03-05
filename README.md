@@ -1,6 +1,6 @@
 # Django Midtrans Payment API
 
-A robust Backend API built with Django Rest Framework (DRF) to handle e-commerce checkouts and secure automated payment notifications using the Midtrans Payment Gateway.
+A Backend API built with Django Rest Framework (DRF) to handle e-commerce checkouts and secure automated payment notifications using the Midtrans Payment Gateway.
 
 ## Features
 * **Product Management**: CRUD operations for products with stock tracking.
