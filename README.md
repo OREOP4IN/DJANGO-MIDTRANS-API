@@ -22,7 +22,7 @@ A robust Backend API built with Django Rest Framework (DRF) to handle e-commerce
 
 1. **Clone the repository**
 ```bash
-git clone [https://github.com/OREOP4IN/DJANGO-MIDTRANS-API.git](https://github.com/OREOP4IN/DJANGO-MIDTRANS-API.git)
+git clone https://github.com/OREOP4IN/DJANGO-MIDTRANS-API.git
 cd DJANGO-MIDTRANS-API
 
 ```
@@ -48,12 +48,11 @@ pip install -r requirements.txt
 4. **Configure Environment Variables**
 Create a `.env` file in the root directory:
 ```ini
-SECRET_KEY=your_django_secret_key
+SECRET_KEY="SECRET_KEY_HERE"
 DEBUG=True
 MIDTRANS_IS_PRODUCTION=False
-MIDTRANS_SERVER_KEY=your_midtrans_server_key
-MIDTRANS_CLIENT_KEY=your_midtrans_client_key
-
+MIDTRANS_SERVER_KEY=MIDTRANS_SERVER_KEY_HERE
+MIDTRANS_CLIENT_KEY=MIDTRANS_CLIENT_KEY_HERE
 ```
 
 
