@@ -1,0 +1,95 @@
+{
+	"info": {
+		"name": "Django Midtrans Checkout",
+		"description": "API collection for the Backend Developer Technical Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Create Order (Checkout)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\": [\n        {\n            \"product_id\": 1,\n            \"quantity\": 2\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/checkout/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"checkout",
+						""
+					]
+				},
+				"description": "Creates a new order, reduces stock, and returns a Midtrans payment URL."
+			},
+			"response": []
+		},
+		{
+			"name": "2. Simulate Midtrans Webhook (Optional)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"order_id\": \"YOUR_ORDER_ID_HERE\",\n    \"status_code\": \"200\",\n    \"gross_amount\": \"20000.00\",\n    \"transaction_status\": \"settlement\",\n    \"signature_key\": \"YOUR_GENERATED_SHA512_HASH_HERE\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/webhook/midtrans/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"webhook",
+						"midtrans",
+						""
+					]
+				},
+				"description": "Simulates the payload Midtrans sends. Note: You must generate a valid SHA512 signature key for this to return a 200 OK, otherwise it will return a 403 Forbidden (which proves your security works!)."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
