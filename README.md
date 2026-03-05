@@ -21,13 +21,13 @@ A robust Backend API built with Django Rest Framework (DRF) to handle e-commerce
 ## Installation & Setup
 
 1. **Clone the repository**
-   ```bash
-   git clone [https://github.com/OREOP4IN/DJANGO-MIDTRANS-API.git](https://github.com/OREOP4IN/DJANGO-MIDTRANS-API.git)
-   cd DJANGO-MIDTRANS-API
+```bash
+git clone [https://github.com/OREOP4IN/DJANGO-MIDTRANS-API.git](https://github.com/OREOP4IN/DJANGO-MIDTRANS-API.git)
+cd DJANGO-MIDTRANS-API
 
 ```
 
-2. **Create and Activate Virtual Environment**
+1. **Create and Activate Virtual Environment**
 ```bash
 python -m venv venv
 # Windows:
