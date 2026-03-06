@@ -3,6 +3,7 @@ import hashlib
 import midtransclient
 from rest_framework import views, status
 from rest_framework.response import Response
+from rest_framework.decorators import api_view
 from django.db import transaction
 from .models import Product, Order, OrderItem
 from .serializers import CheckoutSerializer
@@ -96,3 +97,16 @@ class MidtransWebhookView(views.APIView):
             return Response({"message": "OK"}, status=status.HTTP_200_OK)
         except Order.DoesNotExist:
             return Response({"error": "Order not found"}, status=status.HTTP_404_NOT_FOUND)
+        
+@api_view(['GET'])
+def product_list(request):
+    products = Product.objects.all()
+    data = [
+        {
+            "id": p.id, 
+            "name": p.name, 
+            "price": p.price, 
+            "stock": p.stock
+        } for p in products
+    ]
+    return Response(data, status=status.HTTP_200_OK)
