@@ -70,8 +70,8 @@ python manage.py runserver
 
 ```
 
-
-
+7. **Test It Out**
+open up 127.0.0.1/admin and test it out through the admin interface
 ---
 
 ## Testing the Webhook (Local)
