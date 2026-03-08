@@ -71,7 +71,13 @@ python manage.py runserver
 ```
 
 7. **Test It Out**
-open up 127.0.0.1/admin and test it out through the admin interface
+
+   To verify the installation and manage your data, access the Django Admin interface:
+
+    1. Open your web browser.
+    2. Navigate to: `http://127.0.0.1:8000/admin`
+    3. Log in with your superuser credentials to test the interface.
+
 ---
 
 ## Testing the Webhook (Local)
